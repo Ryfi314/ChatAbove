@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "chatabove",
+  "version": "${version}",
+  "name": "ChatAbove",
+  "description": "Shows text above the head written by players",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/ryfi/ChatAbove"
+  },
+  "license": "MIT",
+  "icon": "assets/chatabove/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "lol.ryfi.chatabove.client.ChatAboveClient"
+    ],
+    "main": [
+      "lol.ryfi.chatabove.ChatAbove"
+    ],
+    "modmenu": [
+      "lol.ryfi.chatabove.modmenu.ChatAboveModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "chatabove.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
