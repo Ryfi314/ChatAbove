@@ -26,15 +26,15 @@ public class ChatParser {
         int index = 0;
         String[] words = message.split(" ");
         for (var word : words) {
-            if (word.equals(gameProfile.getName())) break;
             index++;
+            if (word.contains(gameProfile.getName())) break;
         }
 
 
         List<String> strings = new ArrayList<>();
         StringBuilder buffer = new StringBuilder();
 
-        for (var str : Arrays.copyOf(words, index)) {
+        for (var str : Arrays.copyOfRange(words, index, words.length)) {
             if (
                     (
                             buffer.isEmpty() ?

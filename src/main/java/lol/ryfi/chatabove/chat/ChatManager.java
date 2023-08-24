@@ -128,7 +128,7 @@ public class ChatManager {
                     if (playerListEntry != null) return playerListEntry.getProfile();
                     return null;
                 })
-                .filter(Objects::nonNull).findFirst().get();
+                .filter(Objects::nonNull).findFirst().orElse(null);
     }
 
 }

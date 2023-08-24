@@ -4,9 +4,9 @@
   "version": "${version}",
   "name": "ChatAbove",
   "description": "Shows text above the head written by players",
-  "authors": [],
+  "authors": ["Ryfi_Coder"],
   "contact": {
-    "repo": "https://github.com/ryfi/ChatAbove"
+    "repo": "https://github.com/Ryfi314/ChatAbove"
   },
   "license": "MIT",
   "icon": "assets/chatabove/icon.png",

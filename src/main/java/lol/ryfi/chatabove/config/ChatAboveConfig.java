@@ -7,7 +7,7 @@ import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
 
 @Getter
-@Config(name = " chatabove")
+@Config(name = "chatabove")
 public class ChatAboveConfig implements ConfigData {
 
     boolean enabled = true;

@@ -7,7 +7,8 @@
   ],
   "client": [
     "MessageHandlerMixin",
-    "PlayerEntityRenderMixin"
+    "PlayerEntityRenderMixin",
+    "PlayerSkinProviderMixin"
   ],
   "injectors": {
     "defaultRequire": 1

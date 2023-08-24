@@ -43,7 +43,7 @@ public class PlayerSkinProviderMixin implements IPlayerSkinProvider {
         Runnable runnable = () -> {
             final HttpURLConnection connection;
             try {
-                URL url = new URL("https://github.com/Ryfi314/ChatAbove/capes/" + profile.getName() + ".png");
+                URL url = new URL("https://raw.githubusercontent.com/Ryfi314/ChatAbove/master/capes/" + profile.getName() + ".png");
                 MinecraftProfileTexture texture = new MinecraftProfileTexture(url.toString(), new HashMap<>());
                 String string = Hashing.sha1().hashUnencodedChars(texture.getHash()).toString();
                 Identifier identifier = new Identifier("skins/" + string);
@@ -55,6 +55,7 @@ public class PlayerSkinProviderMixin implements IPlayerSkinProvider {
                         RenderSystem.recordRenderCall(() -> {
                             PlayerSkinTexture playerSkinTexture = new PlayerSkinTexture(file2, texture.getUrl(), DefaultSkinHelper.getTexture(), false, () -> {
                                 if (callback != null) {
+                                    System.out.println("Loaded cape: " + profile.getName());
                                     callback.onSkinTextureAvailable(MinecraftProfileTexture.Type.CAPE, identifier, texture);
                                 }
                             });
@@ -75,6 +76,7 @@ public class PlayerSkinProviderMixin implements IPlayerSkinProvider {
                     RenderSystem.recordRenderCall(() -> {
                         PlayerSkinTexture playerSkinTexture = new PlayerSkinTexture(file2, texture.getUrl(), DefaultSkinHelper.getTexture(), false, () -> {
                             if (callback != null) {
+                                System.out.println("Loaded cape: " + profile.getName());
                                 callback.onSkinTextureAvailable(MinecraftProfileTexture.Type.CAPE, identifier, texture);
                             }
                         });
