@@ -14,6 +14,5 @@ also you can chose animation type or disable (by default)
 for configuration you need to mod menu installed\
 go to the mod list and find this mod and click settings\
 ![image](https://github.com/Ryfi314/ChatAbove/assets/47270610/a2941e14-d215-4eb8-ab01-935fb9775f42)\
-then you can can customize your settings
 ![image](https://github.com/Ryfi314/ChatAbove/assets/47270610/6d20ca8a-e3ac-4aaa-ba76-69893e2dff21)
 
