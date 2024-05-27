@@ -24,6 +24,8 @@ public abstract class PlayerEntityRenderMixin extends LivingEntityRenderer<Abstr
 
     @Inject(method = "render(Lnet/minecraft/client/network/AbstractClientPlayerEntity;FFLnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;I)V", at = @At(value = "RETURN"))
     public void render(AbstractClientPlayerEntity abstractClientPlayerEntity, float f, float g, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i, CallbackInfo ci) {
+        if(dispatcher.camera == null) return;
+
         double d = this.dispatcher.getSquaredDistanceToCamera(abstractClientPlayerEntity);
         if (d > 4096.0D) {
             return;

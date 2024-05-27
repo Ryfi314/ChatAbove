@@ -1,14 +1,12 @@
 {
   "required": true,
-  "minVersion": "0.8",
   "package": "lol.ryfi.chatabove.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
   ],
   "client": [
     "MessageHandlerMixin",
-    "PlayerEntityRenderMixin",
-    "PlayerSkinProviderMixin"
+    "PlayerEntityRenderMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -23,8 +23,6 @@ public class ChatAboveClient implements ClientModInitializer {
 
         config = AutoConfig.getConfigHolder(ChatAboveConfig.class).getConfig();
         chatManager.initialize();
-        ClientTickEvents.END_CLIENT_TICK.register(client -> {
-            chatManager.tick();
-        });
+        ClientTickEvents.END_CLIENT_TICK.register(client -> chatManager.tick());
     }
 }

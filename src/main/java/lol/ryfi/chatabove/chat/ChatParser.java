@@ -34,7 +34,7 @@ public class ChatParser {
         List<String> strings = new ArrayList<>();
         StringBuilder buffer = new StringBuilder();
 
-        for (var str : Arrays.copyOfRange(words, index, words.length)) {
+        for (var str : message.contains(gameProfile.getName()) ? Arrays.copyOfRange(words, index, words.length) : words) {
             if (
                     (
                             buffer.isEmpty() ?
@@ -48,7 +48,6 @@ public class ChatParser {
             }
         }
         if (!buffer.isEmpty()) strings.add(buffer.toString());
-
         return strings;
     }
 
